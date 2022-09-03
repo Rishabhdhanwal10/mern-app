@@ -9,7 +9,7 @@ const Home = () => {
         try {
 
             const token = localStorage.getItem("jwtToken");
-            const response = await fetch('http://localhost:8000/getdata', {
+            const response = await fetch('/getdata', {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${token}`,

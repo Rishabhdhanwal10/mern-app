@@ -9,7 +9,7 @@ const Contact = () => {
         try {
 
             const token = localStorage.getItem("jwtToken");
-            const response = await fetch('http://localhost:8000/getdata', {
+            const response = await fetch('/getdata', {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${token}`,
@@ -52,7 +52,7 @@ const Contact = () => {
         const { name, email, phone, message } = userData;
         
         const token = localStorage.getItem("jwtToken");
-        const response = await fetch('http://localhost:8000/contact', {
+        const response = await fetch('/contact', {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
