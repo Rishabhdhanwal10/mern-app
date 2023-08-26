@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
 import signpic from '../images/signup.svg';
 
