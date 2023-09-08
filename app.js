@@ -17,32 +17,14 @@ require("./db/connection");
 app.use(express.json());
 
 // we link the router files to make our route easy 
-app.use(require('./router/auth'))
+app.use(require('./router/auth'));
 
-
-// app.get('/', (req, res) => {
-//     res.send("Hello World from home")
-// });
-
-
-// app.get('/contact', (req, res) => {
-//     res.cookie("test", "merndeveloper");
-//     res.send("Hello World from contact")
-// });
-
-// app.get('/signin', (req, res) => {
-//     res.send("Hello World from Login")
-// });
-
-// app.get('/signup', (req, res) => {
-//     res.send("Hello World from Signup")
-// });
 
 app.use(express.static(path.join(__dirname, './client/build')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
-})
+});
 
 
 app.listen(PORT, () => {
